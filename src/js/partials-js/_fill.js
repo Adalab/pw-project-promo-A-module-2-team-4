@@ -24,6 +24,8 @@ const linkGithub = document.querySelector('.js__link_github');
 
 // events
 
+    //-Fullname Event:
+
 fullname.addEventListener ('input', (event) => {
     event.preventDefault ();
 
@@ -34,6 +36,8 @@ fullname.addEventListener ('input', (event) => {
     cardTitle.innerHTML = inputName;
 })
 
+    //-Job Event:
+    
 work.addEventListener ('input', (event) => {
     event.preventDefault ();
 
@@ -43,6 +47,8 @@ work.addEventListener ('input', (event) => {
     // Write input on card:
     cardSubtitle.innerHTML = inputJob;
 })
+
+    //-Email Event:
 
 linkEmail.addEventListener('click', (event) =>{
     event.preventDefault ();
@@ -54,7 +60,22 @@ linkEmail.addEventListener('click', (event) =>{
     window.location.href = inputEmail;
 
 })
+
+    //- Phone Event:
+
+linkPhone.addEventListener('click', (event) =>{
+    event.preventDefault ();
     
+    //Insert Input Value:
+    const inputPhone = telephone.value; 
+    
+    //Open tel: 
+    window.location.href = 'tel:'+ inputPhone;
+    
+})
+
+    //-Linkedin Event:
+
 linkLinkedin.addEventListener('click', (event) =>{
     event.preventDefault ();
 
@@ -65,6 +86,8 @@ linkLinkedin.addEventListener('click', (event) =>{
     window.open(inputLinkedin, '_blank');
 
 })
+
+    //- Github Event:
 
 linkGithub.addEventListener('click', (event) =>{
     event.preventDefault ();
@@ -77,15 +100,5 @@ linkGithub.addEventListener('click', (event) =>{
 
 })
 
-linkPhone.addEventListener('click', (event) =>{
-    event.preventDefault ();
-
-    //Insert Input Value:
-    const inputPhone = telephone.value; 
-
-    //Open tel: 
-    window.location.href = 'tel:'+ inputPhone;
-
-})
     
     
